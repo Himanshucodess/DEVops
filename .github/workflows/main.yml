@@ -1,20 +1,23 @@
-name: First Workflow
+name: DevOps Demo
 
 on:
   push:
 
 jobs:
-  hello:
+  demo:
 
     runs-on: ubuntu-latest
 
     steps:
 
-      - name: Print Hello
-        run: echo "Hello DevOps"
+      - name: Current Directory
+        run: pwd
 
-      - name: Show Files
+      - name: Current User
+        run: whoami
+
+      - name: System Info
+        run: uname -a
+
+      - name: List Files
         run: ls -la
-
-      - name: Print Date
-        run: date
